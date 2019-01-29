@@ -6,9 +6,65 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
+    <div id="intro">
+      <h2>Crea y descifra mensajes secretos para tu pareja</h2>
+      <input type="text">
+      <button>Ingresar</button>
     </div>
+
+    <div id="options">
+      <h2>Hola " "</h2>
+      <p>¿Deseas crear o descifrar un mensaje secreto?</p>
+      <button>Crear mensaje</button>
+      <button>Descifrar mensaje</button>
+    </div>
+
+    <div id="offset1">
+      <p>para crear un mensaje elige un número que sea especial para tí y tu pareja</p>
+      <input type="number">
+      <p>Ejemplo: Puede ser la suma del día de sus cumpleaños, el día en que se hicieron novios o se casaron, etc.</p>
+    </div>
+
+    <div id="offset2">
+      <p>ingresa la clave que te dió tu pareja para descrubrir el mensaje</p>
+      <input type="number">
+      <p>Pista: podría ser la suma del día de sus cumpleaños, el día en que se hicieron novios o se casaron, etc.</p>
+    </div>
+
+    <div id="codeMessage">
+      <h2> escribe tu mensaje</h2>
+      <input type="text">
+      <p>Este es tu mensaje secreto</p>
+      <input type="text">
+      <button>descifrar mensaje</button>
+      <button>salir</button>
+      <div>
+        <p>Para crear un nuevo mensaje escribe una clave (Puede ser la misma que usaste)</p>
+        <input type="text">
+        <button>aplicar</button>
+      </div>
+    </div>
+
+    <div id="decodeMessage">
+      <h2> inserta tu mensaje secreto</h2>
+      <input type="text">
+      <p>este es el mensaje de tu pareja</p>
+      <input type="text">
+      <button>crear mensaje</button>
+      <button>salir</button>
+      <div>
+        <p>Para descifrar un nuevo mensaje escribe una clave (Puede ser la misma que usaste)</p>
+        <input type="text">
+        <button>aplicar</button>
+      </div>
+    </div>
+
+    <div>
+      <h2>'Aquí va una frase romántica'</h2>
+      <p>Volver al inicio</p>
+      <button>inicio</button>
+    </div>
+    
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
