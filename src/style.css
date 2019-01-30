@@ -1,0 +1,21 @@
+#intro {
+    display: block;
+}
+#options {
+    display: none;
+}
+#offset1 {
+    display: none;
+}
+#offset2 {
+    display: none;
+}
+#codeMessage {
+    display: none;
+}
+#decodeMessage {
+    display: none;
+}
+#exit {
+    display: none;
+}
