@@ -1,3 +1,26 @@
-window.cipher = {
-  
+const caesEncode = (message,offset) =>{
+    let result ='';
+    for(let i=0; i<message.length; i++){
+        let findAscii = message.charCodeAt(i);
+        let getPosition = (findAscii - 65 + offset) % 26 + 65;
+        let bringChar = String.fromCharCode(getPosition);
+        result += bringChar;
+    } 
+    return result;
 };
+
+const caesDecode = (message,offset) =>{
+    let result ='';
+    for(let i=0; i<message.length; i++){
+        let findAscii = message.charCodeAt(i);
+        let getPosition = (findAscii - 65 - offset) % 26 + 65;
+        let bringChar = String.fromCharCode(getPosition);
+        result += bringChar;
+    } 
+    return result;
+};
+
+window.cipher = {
+    encode: caesEncode,
+    decode: caesDecode,
+  };
