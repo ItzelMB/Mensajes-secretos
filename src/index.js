@@ -4,14 +4,14 @@ let messageValue;
 //Funciones para mostrar valores de mensaje de usuario
 const encUserMessage = () =>{
     messageValue = document.getElementById('userMessage1').value;
-    document.getElementById('userMessageEnc').value = cipher.encode(messageValue, offsetValue);
-}
+    document.getElementById('userMessageEnc').value = cipher.encode(parseInt(offsetValue), messageValue.toUpperCase());
+};
 document.getElementById('secret').addEventListener('click', encUserMessage);
 
 const decUserMessage = () =>{
     messageValue = document.getElementById('userMessage2').value;
-    document.getElementById('userMessageDec').value = cipher.decode(messageValue, offsetValue);
-}
+    document.getElementById('userMessageDec').value = cipher.decode(parseInt(offsetValue), messageValue.toUpperCase());
+};
 document.getElementById('findsecret').addEventListener('click', decUserMessage);
 
 //Declaración de variables para pantallas
@@ -25,13 +25,13 @@ let exit = document.getElementById('exit');
 
 //Función muestra pantalla de opciones
 const showOptions = () =>{
-    options.style.display = 'block';
-    intro.style.display = 'none';
-    if(inputName.value){
-        let userName = document.getElementById('inputName');
-        document.getElementById('welcome').innerHTML = '!Hola ' + userName.value + "!";
+    let inputName = document.getElementById('inputName');
+    if(inputName.value != ''){
+        options.style.display = 'block';
+        intro.style.display = 'none';
+        document.getElementById('welcome').innerHTML = '!Hola ' + inputName.value + "!";
     } else {
-        return false;
+        return alert('Por favor, ingresa tu nombre');
     }
 };
 document.getElementById('enter').addEventListener('click', showOptions);
@@ -62,7 +62,6 @@ document.getElementById('returnDec').addEventListener('click', showOffset2);
 const showEncodeMess = () =>{
     encodeMessage.style.display = 'block';
     offset1.style.display = 'none';
-    //decodeMessage.style.display = 'none';
     exit.style.display = 'none';
     offsetValue = document.getElementById('num1').value;
 };
@@ -72,7 +71,6 @@ document.getElementById('next1').addEventListener('click', showEncodeMess);
 const showDecodeMess = () =>{
     decodeMessage.style.display = 'block';
     offset2.style.display = 'none';
-    //encodeMessage.style.display = 'none';
     exit.style.display = 'none';
     offsetValue = document.getElementById('num2').value;
 };
