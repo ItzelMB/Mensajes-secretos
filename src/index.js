@@ -1,9 +1,18 @@
+let offsetValue;
+let messageValue;
 
-document.write(cipher.encode('GOOD',1));
-document.write(cipher.decode('HPPE',1));
+//Funciones para mostrar valores de mensaje de usuario
+const encUserMessage = () =>{
+    messageValue = document.getElementById('userMessage1').value;
+    document.getElementById('userMessageEnc').value = cipher.encode(messageValue, offsetValue);
+}
+document.getElementById('secret').addEventListener('click', encUserMessage);
 
-const inputMessage1 = userMessage.value;
-const outputMessage = cipher.decode();
+const decUserMessage = () =>{
+    messageValue = document.getElementById('userMessage2').value;
+    document.getElementById('userMessageDec').value = cipher.decode(messageValue, offsetValue);
+}
+document.getElementById('findsecret').addEventListener('click', decUserMessage);
 
 //Declaración de variables para pantallas
 let intro = document.getElementById('intro');
@@ -18,6 +27,12 @@ let exit = document.getElementById('exit');
 const showOptions = () =>{
     options.style.display = 'block';
     intro.style.display = 'none';
+    if(inputName.value){
+        let userName = document.getElementById('inputName');
+        document.getElementById('welcome').innerHTML = '!Hola ' + userName.value + "!";
+    } else {
+        return false;
+    }
 };
 document.getElementById('enter').addEventListener('click', showOptions);
 
@@ -25,35 +40,43 @@ document.getElementById('enter').addEventListener('click', showOptions);
 const showOffset1 = () =>{
     offset1.style.display = 'block';
     options.style.display = 'none';
+    decodeMessage.style.display = 'none';
+    exit.style.display = 'none';
 };
 document.getElementById('create').addEventListener('click', showOffset1);
+document.getElementById('encoMessage').addEventListener('click', showOffset1);
+document.getElementById('returnEnc').addEventListener('click', showOffset1);
 
 //Función muestra pantalla para hacer offset decodificar
 const showOffset2 = () =>{
     offset2.style.display = 'block';
     options.style.display = 'none';
+    encodeMessage.style.display = 'none';
+    exit.style.display = 'none';
 };
 document.getElementById('decode').addEventListener('click', showOffset2);
+document.getElementById('decoMessage').addEventListener('click', showOffset2);
+document.getElementById('returnDec').addEventListener('click', showOffset2);
 
 //Función muestra pantalla para codificar mensaje
 const showEncodeMess = () =>{
     encodeMessage.style.display = 'block';
     offset1.style.display = 'none';
-    decodeMessage.style.display = 'none';
+    //decodeMessage.style.display = 'none';
     exit.style.display = 'none';
+    offsetValue = document.getElementById('num1').value;
 };
 document.getElementById('next1').addEventListener('click', showEncodeMess);
-document.getElementById('encoMessage').addEventListener('click', showEncodeMess);
 
 //Función muestra pantalla para decodificar mensaje
 const showDecodeMess = () =>{
     decodeMessage.style.display = 'block';
     offset2.style.display = 'none';
-    encodeMessage.style.display = 'none';
+    //encodeMessage.style.display = 'none';
     exit.style.display = 'none';
+    offsetValue = document.getElementById('num2').value;
 };
 document.getElementById('next2').addEventListener('click', showDecodeMess);
-document.getElementById('decoMessage').addEventListener('click', showDecodeMess);
 
 //Función para mostrar pantalla de salida
 const showExit = () =>{
@@ -70,25 +93,3 @@ const showIntro = () =>{
     exit.style.display = 'none';
 };
 document.getElementById('index').addEventListener('click', showIntro);
-document.getElementById('returnEnc').addEventListener('click', showEncodeMess);
-document.getElementById('returnDec').addEventListener('click', showDecodeMess);
-
-//Función para mostrar pantallas siguiente02
-/*const nextScreen = () =>{
-    let newview = '';
-    if()
-    return newview;
-     //return document.getElementById(nextScreen)
-}
-const showOffset = () =>{
-    if(showOffset1()){
-        document.getElementById('offset1');
-        offset1.style.display = 'block';
-        options.style.display = 'none';
-    } else {
-        document.getElementById('offset2');
-    offset2.style.display = 'block';
-    options.style.display = 'none';
-    }
-}
-*/
