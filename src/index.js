@@ -42,6 +42,7 @@ const showOffset1 = () =>{
     options.style.display = 'none';
     decodeMessage.style.display = 'none';
     exit.style.display = 'none';
+    cleanValues();
 };
 document.getElementById('create').addEventListener('click', showOffset1);
 document.getElementById('encoMessage').addEventListener('click', showOffset1);
@@ -53,6 +54,7 @@ const showOffset2 = () =>{
     options.style.display = 'none';
     encodeMessage.style.display = 'none';
     exit.style.display = 'none';
+    cleanValues();
 };
 document.getElementById('decode').addEventListener('click', showOffset2);
 document.getElementById('decoMessage').addEventListener('click', showOffset2);
@@ -87,7 +89,18 @@ document.getElementById('exit2').addEventListener('click', showExit);
 
 //Función para mostrar pantalla de inicio
 const showIntro = () =>{
-    intro.style.display = 'block';
-    exit.style.display = 'none';
+   // intro.style.display = 'block';
+    //exit.style.display = 'none';
+    location.reload();
 };
 document.getElementById('index').addEventListener('click', showIntro);
+
+//Función para limpiar valores de inputs
+const cleanValues = () =>{
+    document.getElementById('num2').value = '';
+    document.getElementById('userMessage1').value = '';
+    document.getElementById('userMessageEnc').value = '';
+    document.getElementById('num1').value = '';
+    document.getElementById('userMessage2').value = '';
+    document.getElementById('userMessageDec').value = '';
+};
