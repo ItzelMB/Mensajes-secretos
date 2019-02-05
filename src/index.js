@@ -1,7 +1,7 @@
 let offsetValue;
 let messageValue;
 
-//Funciones para mostrar valores de mensaje de usuario
+//Funciones para mostrar valores de mensaje de usuario (offset y mensaje)
 const encUserMessage = () =>{
     messageValue = document.getElementById('userMessage1').value;
     document.getElementById('userMessageEnc').value = cipher.encode(parseInt(offsetValue), messageValue.toUpperCase());
@@ -14,7 +14,7 @@ const decUserMessage = () =>{
 };
 document.getElementById('findsecret').addEventListener('click', decUserMessage);
 
-//Declaración de variables para pantallas
+//Declaración de variables para mostrar pantallas
 let intro = document.getElementById('intro');
 let options = document.getElementById('options');
 let offset1 = document.getElementById('offset1');
@@ -22,10 +22,10 @@ let offset2 = document.getElementById('offset2');
 let encodeMessage = document.getElementById('encodeMessage');
 let decodeMessage = document.getElementById('decodeMessage');
 let exit = document.getElementById('exit');
+let inputName = document.getElementById('inputName');
 
 //Función muestra pantalla de opciones
 const showOptions = () =>{
-    let inputName = document.getElementById('inputName');
     if(inputName.value != ''){
         options.style.display = 'block';
         intro.style.display = 'none';
@@ -38,6 +38,7 @@ document.getElementById('enter').addEventListener('click', showOptions);
 
 //Función muestra pantalla para hacer offset codificar
 const showOffset1 = () =>{
+    document.getElementById('name1').innerHTML = inputName.value + ' ' + 'para crear un mensaje elige un número' + '<br/>' + 'que sea especial para tí y tu pareja';
     offset1.style.display = 'block';
     options.style.display = 'none';
     decodeMessage.style.display = 'none';
@@ -50,6 +51,7 @@ document.getElementById('returnEnc').addEventListener('click', showOffset1);
 
 //Función muestra pantalla para hacer offset decodificar
 const showOffset2 = () =>{
+    document.getElementById('name2').innerHTML = inputName.value + ' ' + 'ingresa la clave que te dió tu pareja para descrubrir el mensaje';
     offset2.style.display = 'block';
     options.style.display = 'none';
     encodeMessage.style.display = 'none';
@@ -68,7 +70,8 @@ const showEncodeMess = () =>{
         offset1.style.display = 'none';
     } else{
         return alert('Por favor, ingresa un número');
-    }   
+    }  
+    document.getElementById('name3').innerHTML = inputName.value + ' ' +'ahora escribe tu mensaje'; 
     exit.style.display = 'none';
     offsetValue = document.getElementById('num1').value;
 };
@@ -83,6 +86,7 @@ const showDecodeMess = () =>{
     } else{
         return alert('Por favor, ingresa un número');
     }
+    document.getElementById('name4').innerHTML = inputName.value + ' ' +'ahora inserta tu mensaje secreto';
     exit.style.display = 'none';
     offsetValue = document.getElementById('num2').value;
 };
@@ -90,6 +94,7 @@ document.getElementById('next2').addEventListener('click', showDecodeMess);
 
 //Función para mostrar pantalla de salida
 const showExit = () =>{
+    document.getElementById('name5').innerHTML = '¡Gracias por usar esta app ' + inputName.value + ' ' +'vuelve pronto!';
     exit.style.display = 'block';
     encodeMessage.style.display = 'none';
     decodeMessage.style.display = 'none';

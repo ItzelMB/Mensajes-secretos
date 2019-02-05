@@ -11,7 +11,7 @@
     <div id="intro">
       <h2>Crea y descifra mensajes secretos <br/> para tu persona especial</h2>
       <p>¡Para iniciar escribe tu nombre!</p>
-      <input id= "inputName" type="text">
+      <input id= "inputName" type="text" placeholder="Aquí va tu nombre">
       <div><button id="enter">Iniciar</button></div>
     </div>
 
@@ -23,28 +23,30 @@
     </div>
 
     <div id="offset1">
-      <h2>para crear un mensaje elige un número <br/> que sea especial para tí y tu pareja</h2>
-      <input type="number" id="num1">
+      <h2 id="name1"></h2>
+      <input type="number" id="num1" placeholder="Aquí va un número">
       <p><span>Ejemplo:</span> Puede ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron o se hicieron novios, etc.</p>
-      <p>¡Asegúrate de que sean solo números!</p>
       <button id="next1">Siguiente</button>
     </div>
 
     <div id="offset2">
-      <h2>ingresa la clave que te dió tu pareja para descrubrir el mensaje</h2>
-      <input type="number" id="num2">
+      <h2 id="name2"></h2>
+      <input type="number" id="num2" placeholder="Aquí va un número">
       <p><span>Pista:</span> podría ser la suma del día de sus cumpleaños, <br/> el día en que se hicieron novios o se casaron, etc.</p>
       <button id="next2">Siguiente</button>
     </div>
 
     <div id="encodeMessage">
-      <h2> escribe tu mensaje</h2>
-      <input type="text" id="userMessage1">
-      <button id="secret">hacer secreto</button>
+      <h2 id="name3"></h2>
+      <input type="text" id="userMessage1" class="textarea" placeholder="Aquí escribe tu mensaje">
+      <div><button id="secret">hacer secreto</button></div>
       <p>Este es tu mensaje secreto</p>
       <input type="text" id="userMessageEnc" disabled="">
-      <button id="decoMessage">descifrar mensaje</button>
-      <button id="exit1">salir</button>
+      <div>
+        <button id="decoMessage">descifrar mensaje</button>
+        <button id="exit1">salir</button>
+      </div>
+     
   <!--<div>
         <p>Para crear un nuevo mensaje escribe una clave (Puede ser la misma que usaste)</p>
         <input type="text">
@@ -53,13 +55,16 @@
     </div>
 
     <div id="decodeMessage">
-      <h2> inserta tu mensaje secreto</h2>
-      <input type="text" id= "userMessage2">
-      <button id="findsecret">conocer secreto</button>
-      <p>este es el mensaje de tu pareja</p>
-      <input type="text" id="userMessageDec" disabled="">
-      <button id="encoMessage">crear mensaje</button>
+      <h2 id="name4"></h2>
+      <input type="text" id= "userMessage2" class="textreading" placeholder="Aquí escribe o pega el mensaje secreto">
+      <div><button id="findsecret">conocer secreto</button></div>
+      <p>Este es el mensaje revelado</p>
+      <input type="text" id="userMessageDec" class="textarea" disabled="">
+      <div>
+        <button id="encoMessage">crear mensaje</button>
       <button id="exit2">salir</button>
+      </div>
+      
   <!--<div>
         <p>Para descifrar un nuevo mensaje escribe una clave (Puede ser la misma que usaste)</p>
         <input type="text">
@@ -69,6 +74,7 @@
 
     <div id="exit">
       <h2>"Al principio todos los pensamientos pertenecen al amor. <br/>Después, todo el amor pertenece a los pensamientos" <br/><span>-Albert Einstein-</span></h2>
+      <p id="name5"></p>
       <button id="index">volver a inicio</button>
       <button id="returnEnc">volver a crear</button>
       <button id="returnDec">volver a descifrar</button>
