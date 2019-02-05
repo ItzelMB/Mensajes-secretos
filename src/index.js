@@ -62,8 +62,12 @@ document.getElementById('returnDec').addEventListener('click', showOffset2);
 
 //Función muestra pantalla para codificar mensaje
 const showEncodeMess = () =>{
-    encodeMessage.style.display = 'block';
-    offset1.style.display = 'none';
+    if(num1.value != ''){
+        encodeMessage.style.display = 'block';
+        offset1.style.display = 'none';
+    } else{
+        return alert('Por favor, ingresa un número');
+    }   
     exit.style.display = 'none';
     offsetValue = document.getElementById('num1').value;
 };
@@ -71,8 +75,12 @@ document.getElementById('next1').addEventListener('click', showEncodeMess);
 
 //Función muestra pantalla para decodificar mensaje
 const showDecodeMess = () =>{
-    decodeMessage.style.display = 'block';
-    offset2.style.display = 'none';
+    if(num2.value != ''){
+        decodeMessage.style.display = 'block';
+        offset2.style.display = 'none';
+    } else{
+        return alert('Por favor, ingresa un número');
+    }
     exit.style.display = 'none';
     offsetValue = document.getElementById('num2').value;
 };

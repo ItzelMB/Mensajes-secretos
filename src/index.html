@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <title>Mensajes secretos: Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Major+Mono+Display|Nanum+Myeongjo|Noto+Serif|Old+Standard+TT|Pacifico|Playball|Raleway|Satisfy|Staatliches" rel="stylesheet">
+    <!--<a href="https://www.freepik.es/fotos-vectores-gratis/fondo">Foto de fondo creado por freepik - www.freepik.es</a>-->
   </head>
   <body>
     <div id="intro">
-      <h2>Crea y descifra mensajes secretos para tu pareja</h2>
-      <input id= "inputName" type="text">
-      <button id="enter">Ingresar</button>
+      <h2>Crea y descifra mensajes secretos <br/> para tu persona especial</h2>
+      <p>¡Para iniciar escribe tu nombre!</p>
+      <input id= "inputName" type="text"></input>
+      <div><button id="enter">Iniciar</button></div>
     </div>
 
     <div id="options">
@@ -20,26 +23,26 @@
     </div>
 
     <div id="offset1">
-      <p>para crear un mensaje elige un número que sea especial para tí y tu pareja</p>
-      <input type="number" id="num1">
-      <p>Ejemplo: Puede ser la suma del día de sus cumpleaños, el día en que se conocieron o se hicieron novios, etc.</p>
+      <h2>para crear un mensaje elige un número <br/> que sea especial para tí y tu pareja</p>
+      <input type="number" id="num1"></input>
+      <p><span>Ejemplo:</span> Puede ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron o se hicieron novios, etc.</p>
       <p>¡Asegúrate de que sean solo números!</p>
       <button id="next1">Siguiente</button>
     </div>
 
     <div id="offset2">
-      <p>ingresa la clave que te dió tu pareja para descrubrir el mensaje</p>
-      <input type="number" id="num2">
-      <p>Pista: podría ser la suma del día de sus cumpleaños, el día en que se hicieron novios o se casaron, etc.</p>
+      <h2>ingresa la clave que te dió tu pareja para descrubrir el mensaje</p>
+      <input type="number" id="num2"></input>
+      <p><span>Pista:</span> podría ser la suma del día de sus cumpleaños, <br/> el día en que se hicieron novios o se casaron, etc.</p>
       <button id="next2">Siguiente</button>
     </div>
 
     <div id="encodeMessage">
       <h2> escribe tu mensaje</h2>
-      <input type="text" id="userMessage1">
+      <input type="text" id="userMessage1"></input>
       <button id="secret">hacer secreto</button>
       <p>Este es tu mensaje secreto</p>
-      <input type="text" id="userMessageEnc" disabled=''>
+      <input type="text" id="userMessageEnc" disabled=""></input>
       <button id="decoMessage">descifrar mensaje</button>
       <button id="exit1">salir</button>
   <!--<div>
@@ -51,10 +54,10 @@
 
     <div id="decodeMessage">
       <h2> inserta tu mensaje secreto</h2>
-      <input type="text" id= "userMessage2">
+      <input type="text" id= "userMessage2"></input>
       <button id="findsecret">conocer secreto</button>
       <p>este es el mensaje de tu pareja</p>
-      <input type="text" id="userMessageDec" disabled=''>
+      <input type="text" id="userMessageDec" disabled=""></input>
       <button id="encoMessage">crear mensaje</button>
       <button id="exit2">salir</button>
   <!--<div>
@@ -65,9 +68,8 @@
     </div>
 
     <div id="exit">
-      <h2>"Al principio todos los pensamientos pertenecen al amor. Después, todo el amor pertenece a los pensamientos"</h2>
-      <p>Volver al inicio</p>
-      <button id="index">inicio</button>
+      <h2>"Al principio todos los pensamientos pertenecen al amor. <br/>Después, todo el amor pertenece a los pensamientos" <br/><span>-Albert Einstein-</span></h2>
+      <button id="index">volver a inicio</button>
       <button id="returnEnc">volver a crear</button>
       <button id="returnDec">volver a descifrar</button>
     </div>
