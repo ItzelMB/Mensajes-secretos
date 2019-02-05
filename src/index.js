@@ -62,6 +62,7 @@ document.getElementById('returnDec').addEventListener('click', showOffset2);
 
 //Función muestra pantalla para codificar mensaje
 const showEncodeMess = () =>{
+    let num1 = document.getElementById('num1');
     if(num1.value != ''){
         encodeMessage.style.display = 'block';
         offset1.style.display = 'none';
@@ -75,6 +76,7 @@ document.getElementById('next1').addEventListener('click', showEncodeMess);
 
 //Función muestra pantalla para decodificar mensaje
 const showDecodeMess = () =>{
+    let num2 = document.getElementById('num2');
     if(num2.value != ''){
         decodeMessage.style.display = 'block';
         offset2.style.display = 'none';
