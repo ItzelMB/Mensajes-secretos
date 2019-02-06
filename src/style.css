@@ -5,10 +5,7 @@
 #intro {
     display: block;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2017/07/21/23/41/note-2527454_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/07/21/23/41/rope-2527457_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/08/07/04/05/heart-2599643_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/02/10/20/49/banner-2056314_960_720.png');*/
+    url('https://cdn.pixabay.com/photo/2017/10/28/22/03/envelope-2898268_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -17,7 +14,7 @@
 #options {
     display: none;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2017/01/19/15/36/banner-1992606_960_720.png');*/ 
+    url('https://cdn.pixabay.com/photo/2019/01/12/16/56/valentines-day-3928886_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -26,8 +23,7 @@
 #offset1 {
     display: none;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2017/01/05/14/11/valentines-day-1955236_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/01/18/21/30/banner-1990932_960_720.png');*/ 
+    url('https://cdn.pixabay.com/photo/2018/10/16/08/08/yellow-3750886_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -36,8 +32,7 @@
 #offset2 {
     display: none;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2018/02/11/13/00/easter-bunny-3145745_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/02/10/20/49/banner-2056314_960_720.png');*/ 
+    url('https://cdn.pixabay.com/photo/2018/10/18/10/32/heart-3755986_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -46,8 +41,7 @@
 #encodeMessage {
     display: none;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2017/11/09/18/25/girl-2934257_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/01/12/00/50/banner-1973380_960_720.jpg');*/
+    url('https://cdn.pixabay.com/photo/2018/10/18/10/37/heart-3755997_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -56,8 +50,7 @@
 #decodeMessage {
     display: none;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2019/01/12/19/27/valentine-3929127_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/01/12/00/50/banner-1973380_960_720.jpg');*/
+    url('https://cdn.pixabay.com/photo/2018/10/16/08/08/heart-3750885_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -66,11 +59,7 @@
 #exit {
     display: none;
     background-image:
-    /*url('https://cdn.pixabay.com/photo/2015/01/22/21/32/stones-608373_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2017/07/21/23/38/map-2527433_960_720.jpg');
-    /*url('https://cdn.pixabay.com/photo/2015/01/22/21/32/stones-608374_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2015/01/22/23/22/mother-608492_960_720.jpg');*/
-    /*url('https://cdn.pixabay.com/photo/2018/02/04/02/24/valentine-3128921_960_720.jpg');*/
+    url('https://cdn.pixabay.com/photo/2015/02/10/17/41/red-631349_960_720.jpg');
     background-size: cover;
     box-sizing: content-box;
     width: 100%;
@@ -78,20 +67,22 @@
 }
 
 h2 {
-    font-family: 'Staatliches', cursive;
-    font-size: 2.5rem;
-    padding-top: 5rem;
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #88020C;
+    padding-top: 4.5rem;
 }
 
 p{
     font-family: 'Noto Serif', serif;
     font-size: 1.5rem;
+    color: #5D030A;
     margin-top: 35px;
 }
 input {
     width:350px;
-    height:30px;
-    border-radius: 30px;
+    height:50px;
+    border-radius: 19px;
     margin-top: 35px;
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
@@ -113,6 +104,7 @@ span {
 .textarea {
     background: inherit;
     border: 0;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pacifico', cursive;
     font-size: 2rem;
+    color: #000000;
 }

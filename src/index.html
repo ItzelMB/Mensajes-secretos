@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Mensajes secretos: Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Major+Mono+Display|Nanum+Myeongjo|Noto+Serif|Old+Standard+TT|Pacifico|Playball|Raleway|Satisfy|Staatliches" rel="stylesheet">
-    <!--<a href="https://www.freepik.es/fotos-vectores-gratis/fondo">Foto de fondo creado por freepik - www.freepik.es</a>-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Noto+Serif|Pacifico|Raleway" rel="stylesheet">
   </head>
   <body>
     <div id="intro">
@@ -25,14 +24,14 @@
     <div id="offset1">
       <h2 id="name1"></h2>
       <input type="number" id="num1" placeholder="Aquí va un número">
-      <p><span>Ejemplo:</span> Puede ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron o se hicieron novios, etc.</p>
+      <p><span>Ejemplo:</span> Puede ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron, se hicieron novios o se casaron, etc.</p>
       <button id="next1">Siguiente</button>
     </div>
 
     <div id="offset2">
       <h2 id="name2"></h2>
       <input type="number" id="num2" placeholder="Aquí va un número">
-      <p><span>Pista:</span> podría ser la suma del día de sus cumpleaños, <br/> el día en que se hicieron novios o se casaron, etc.</p>
+      <p><span>Pista:</span> podría ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron, hicieron novios o se casaron.</p>
       <button id="next2">Siguiente</button>
     </div>
 
@@ -40,7 +39,7 @@
       <h2 id="name3"></h2>
       <input type="text" id="userMessage1" class="textarea" placeholder="Aquí escribe tu mensaje">
       <div><button id="secret">hacer secreto</button></div>
-      <p>Este es tu mensaje secreto</p>
+      <h2>Este es tu mensaje secreto</h2>
       <input type="text" id="userMessageEnc" disabled="">
       <div>
         <button id="decoMessage">descifrar mensaje</button>
@@ -58,7 +57,7 @@
       <h2 id="name4"></h2>
       <input type="text" id= "userMessage2" class="textreading" placeholder="Aquí escribe o pega el mensaje secreto">
       <div><button id="findsecret">conocer secreto</button></div>
-      <p>Este es el mensaje revelado</p>
+      <h2>Este es el mensaje revelado</h2>
       <input type="text" id="userMessageDec" class="textarea" disabled="">
       <div>
         <button id="encoMessage">crear mensaje</button>
