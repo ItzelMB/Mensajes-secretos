@@ -77,6 +77,15 @@ const showEncodeMess = () =>{
 };
 document.getElementById('next1').addEventListener('click', showEncodeMess);
 
+//Función de botón para copiar valor de input
+/*const copyMessage = () =>{
+    let copyValue = document.getElementById(userMessageEnc);
+    copyValue.select();
+    document.execCommand("copy");
+    alert("Tu mensaje se ha copiado");
+};
+document.getElementById('copyToClipboard').addEventListener('click', copyMessage);*/
+
 //Función muestra pantalla para decodificar mensaje
 const showDecodeMess = () =>{
     let num2 = document.getElementById('num2');
