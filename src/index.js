@@ -1,13 +1,13 @@
 let offsetValue;
 let messageValue;
 
-//Funciones para mostrar valores de mensaje de usuario (offset y mensaje)
+//Función para mostrar valores de mensaje de usuario codificado (offset y mensaje)
 const encUserMessage = () =>{
     messageValue = document.getElementById('userMessage1').value;
     document.getElementById('userMessageEnc').value = cipher.encode(parseInt(offsetValue), messageValue.toUpperCase());
 };
 document.getElementById('secret').addEventListener('click', encUserMessage);
-
+//Función para mostrar valores de mensaje de usuario decodificado (offset y mensaje)
 const decUserMessage = () =>{
     messageValue = document.getElementById('userMessage2').value;
     document.getElementById('userMessageDec').value = cipher.decode(parseInt(offsetValue), messageValue.toUpperCase());
@@ -24,7 +24,7 @@ let decodeMessage = document.getElementById('decodeMessage');
 let exit = document.getElementById('exit');
 let inputName = document.getElementById('inputName');
 
-//Función muestra pantalla de opciones
+//Función muestra pantalla de opciones con nombre de usuario
 const showOptions = () =>{
     if(inputName.value != ''){
         options.style.display = 'block';
@@ -77,14 +77,14 @@ const showEncodeMess = () =>{
 };
 document.getElementById('next1').addEventListener('click', showEncodeMess);
 
-//Función de botón para copiar valor de input
-/*const copyMessage = () =>{
-    let copyValue = document.getElementById(userMessageEnc);
+//Función de botón para copiar valor de input de mensaje codificado
+const copyMessage = () =>{
+    let copyValue = document.getElementById('userMessageEnc');
     copyValue.select();
     document.execCommand("copy");
     alert("Tu mensaje se ha copiado");
 };
-document.getElementById('copyToClipboard').addEventListener('click', copyMessage);*/
+document.getElementById('copyToClipboard').addEventListener('click', copyMessage);
 
 //Función muestra pantalla para decodificar mensaje
 const showDecodeMess = () =>{
@@ -111,15 +111,13 @@ const showExit = () =>{
 document.getElementById('exit1').addEventListener('click', showExit);
 document.getElementById('exit2').addEventListener('click', showExit);
 
-//Función para mostrar pantalla de inicio
+//Función para mostrar pantalla de inicio limpiando todos los valores anteriores
 const showIntro = () =>{
-   // intro.style.display = 'block';
-    //exit.style.display = 'none';
     location.reload();
 };
 document.getElementById('index').addEventListener('click', showIntro);
 
-//Función para limpiar valores de inputs
+//Función para limpiar valores de inputs para offset, codificar y decodificar
 const cleanValues = () =>{
     document.getElementById('num2').value = '';
     document.getElementById('userMessage1').value = '';

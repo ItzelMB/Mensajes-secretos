@@ -1,77 +1,62 @@
+/*Reglas universales para el documento*/
 * {
     margin: 0;
     text-align: center;
 }
+/*Especificaciones generales para visualización de pantallas*/
+#intro, #options, #offset1, #offset2, #encodeMessage, #decodeMessage, #exit {
+    box-sizing: content-box;
+    width: 100%;
+    height: 39rem;
+    background-size: cover;
+}
+/*Links de imágenes de fondo*/
 #intro {
     display: block;
     background-image:
     url('https://www.chemin-neuf.ca/dam?media-id=5a2802623965889e78c14572');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
 #options {
     display: none;
     background-image:
     url('https://claudiagarfias.works/laboratoria/sharedimages/redheart-bluebckgrnd.jpg');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
 #offset1 {
     display: none;
     background-image:
     url('https://uploads.knightlab.com/storymapjs/151210b84bd8dafa063a619c025fda8e/safe-first-date-locations/_images/yellow%20.jpg');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
 #offset2 {
     display: none;
     background-image:
     url('https://claudiagarfias.works/laboratoria/sharedimages/redheart-greenbckgrnd.jpg');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
 #encodeMessage {
     display: none;
     background-image:
     url('https://claudiagarfias.works/laboratoria/sharedimages/twoheart-yellowbckgrnd.jpg');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
 #decodeMessage {
     display: none;
     background-image:
     url('http://xfant.info/wp-content/uploads/2018/08/pagina-de-color-de-corazon-color-el-colorido-en-ingles.jpg');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
 #exit {
     display: none;
     background-image:
     url('https://i0.wp.com/pixabay.com/static/uploads/photo/2015/02/10/17/41/red-631349_960_720.jpg');
-    background-size: cover;
-    box-sizing: content-box;
-    width: 100%;
-    height: 626px;
 }
-/*#copyToClipboard {
-    width:60px;
-    height:60px;
+/* Estilo para botón que copia mensaje codificado del usuario*/
+#copyToClipboard {
+    width:3.75rem;
+    height:3.75rem;
     color: #FFFFFF;
     background-image: linear-gradient(rgb(252, 96, 90),red); 
-    border-radius: 200px;
-}*/
+    border-radius: 12.5rem;
+    font-family: 'Noto Serif', serif;
+    font-size: 0.625rem;
+}
+/* Estilo general para títulos*/
 h2 {
     font-family: 'Lobster', cursive;
     font-size: 2.2rem;
@@ -79,38 +64,42 @@ h2 {
     text-shadow: 2px 1px 1px #eeeeee; 
     padding-top: 4.5rem;
 }
-
+/* Estilo general para párrafos*/
 p{
     font-family: 'Noto Serif', serif;
     font-size: 1.5rem;
     color: #5D030A;
     text-shadow: 2px 1px 1px #eeeeee; 
-    margin-top: 35px;
+    margin-top: 2.188rem;
 }
+/* Estilo general para inputs*/
 input {
-    width:380px;
-    height:55px;
+    width: 23.75rem;
+    height: 3.125rem;
     background: #eeeeee;
     border: 3px solid #b4b4b4;
     border-radius: 50px;
-    margin-top: 35px;
+    margin-top: 2.188rem;
     font-family: 'Raleway', sans-serif;
     font-size: 1.2rem;
 }
+/* Estilo general para botones*/
 button {
-    width:250px;
-    height:45px;
+    width:15.63rem;
+    height:2.813rem;
     color: #FFFFFF;
     background-image: linear-gradient(rgb(252, 96, 90), red); 
     border-radius: 50px;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     font-family: 'Noto Serif', serif;
     font-size: 0.85rem;
 }
+/* Estilo para diferenciar texto dentro de párrafo*/
 span {
     font-family: 'Noto Serif', serif;
     font-size: 1.23rem;
 }
+/* Estilos para inputs especiales que muestran los mensajes codificados y decodificados*/
 .textarea {
     background: transparent;
     border: 4px solid #88020C;
