@@ -51,7 +51,7 @@ document.getElementById('returnEnc').addEventListener('click', showOffset1);
 
 //Función muestra pantalla para hacer offset decodificar
 const showOffset2 = () =>{
-    document.getElementById('name2').innerHTML = inputName.value + ' ' + 'ingresa la clave que te dió tu pareja para descrubrir el mensaje';
+    document.getElementById('name2').innerHTML = inputName.value + ' ' + 'ingresa la clave que te dió tu pareja <br/> para descrubrir el mensaje';
     offset2.style.display = 'block';
     options.style.display = 'none';
     encodeMessage.style.display = 'none';

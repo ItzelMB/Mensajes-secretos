@@ -5,7 +5,7 @@
     <title>Mensajes secretos: Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
     <!--Links para llamar recursos externos; tipografía e iconos-->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Noto+Serif|Pacifico|Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Lobster|Lato|Raleway|Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
@@ -19,53 +19,56 @@
     <!--Pantalla para seleccionar codificacióno decodificación-->
     <div id="options">
       <h2 id="welcome"></h2>
-      <p>¿Deseas crear o descifrar un mensaje secreto?</p>
+      <p class="variation">¿Deseas crear o descifrar un mensaje secreto?</p>
       <button id="create">Crear mensaje</button>
       <button id="decode">Descifrar mensaje</button>
     </div>
     <!--Pantalla para seleccionar offset de codificación-->
     <div id="offset1">
       <h2 id="name1"></h2>
-      <input type="number" id="num1" placeholder="Aquí va un número">
       <p><span>Ejemplo:</span> Puede ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron, se hicieron novios o se casaron, etc.</p>
+      <input type="number" id="num1" placeholder="Aquí va un número">
+      <p>Recuerda entregar este número o una pista con el mensaje</p>
       <button id="next1">Siguiente</button>
     </div>
     <!--Pantalla para seleccionar offset de decodificación-->
     <div id="offset2">
       <h2 id="name2"></h2>
-      <input type="number" id="num2" placeholder="Aquí va un número">
       <p><span>Pista:</span> podría ser la suma del día de sus cumpleaños, <br/> el día en que se conocieron, hicieron novios o se casaron.</p>
-      <button id="next2">Siguiente</button>
+      <input type="number" id="num2" placeholder="Aquí va un número">
+      <div><button id="next2">Siguiente</button></div>
     </div>
     <!--Pantalla para que el usuario realice codificación-->
     <div id="encodeMessage">
-      <h2 id="name3"></h2>
+      <h2 id="name3" class="special"></h2>
       <input type="text" id="userMessage1" class="textarea" placeholder="Aquí escribe tu mensaje">
       <div><button id="secret">hacer secreto</button></div>
-      <h2>Este es tu mensaje secreto</h2>
+      <h2 class="special">Este es tu mensaje secreto</h2>
       <input type="text" id="userMessageEnc" readonly="">
       <button id="copyToClipboard"><i class="fas fa-copy fa-2x"></i>copiar</button>
       <div>
+          <p>¿Qué deseas hacer ahora?</p>
         <button id="decoMessage">descifrar mensaje</button>
         <button id="exit1">salir</button>
       </div> 
     </div>
     <!--Pantalla para que el usuario realice decodificación-->
     <div id="decodeMessage">
-      <h2 id="name4"></h2>
+      <h2 id="name4" class="special"></h2>
       <input type="text" id= "userMessage2" class="textreading" placeholder="Aquí escribe o pega el mensaje secreto">
       <div><button id="findsecret">conocer secreto</button></div>
-      <h2>Este es el mensaje revelado</h2>
+      <h2 class="special">Este es el mensaje revelado</h2>
       <input type="text" id="userMessageDec" class="textarea" readonly="">
       <div>
+        <p>¿Qué deseas hacer ahora?</p>
         <button id="encoMessage">crear mensaje</button>
-      <button id="exit2">salir</button>
+        <button id="exit2">salir</button>
       </div>
     </div>
     <!--Pantalla para finalizar interacción del usuario con opción de repetir flujo de codificación y decodificación-->
     <div id="exit">
       <h2>"Al principio todos los pensamientos pertenecen al amor. <br/>Después, todo el amor pertenece a los pensamientos" <br/><span>-Albert Einstein-</span></h2>
-      <p id="name5"></p>
+      <p id="name5" class="variation"></p>
       <button id="index">volver a inicio</button>
       <button id="returnEnc">volver a crear</button>
       <button id="returnDec">volver a descifrar</button>
