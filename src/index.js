@@ -4,13 +4,13 @@ let messageValue;
 //Función para mostrar valores de mensaje de usuario codificado (offset y mensaje)
 const encUserMessage = () =>{
     messageValue = document.getElementById('userMessage1').value;
-    document.getElementById('userMessageEnc').value = cipher.encode(parseInt(offsetValue), messageValue.toUpperCase());
+    document.getElementById('userMessageEnc').value = cipher.encode(parseInt(offsetValue), messageValue);
 };
 document.getElementById('secret').addEventListener('click', encUserMessage);
 //Función para mostrar valores de mensaje de usuario decodificado (offset y mensaje)
 const decUserMessage = () =>{
     messageValue = document.getElementById('userMessage2').value;
-    document.getElementById('userMessageDec').value = cipher.decode(parseInt(offsetValue), messageValue.toUpperCase());
+    document.getElementById('userMessageDec').value = cipher.decode(parseInt(offsetValue), messageValue);
 };
 document.getElementById('findsecret').addEventListener('click', decUserMessage);
 
