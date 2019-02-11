@@ -54,7 +54,7 @@
     url('https://i0.wp.com/pixabay.com/static/uploads/photo/2015/02/10/17/41/red-631349_960_720.jpg');
 }
 /* Estilo para botón que copia mensaje codificado del usuario*/
-#copyToClipboard {
+#copyToClipboard, #tryAgainOffs {
     width:3.75rem;
     height:3.75rem;
     color: #FFFFFF;

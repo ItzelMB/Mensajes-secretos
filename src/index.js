@@ -55,12 +55,14 @@ const showOffset2 = () =>{
     offset2.style.display = 'block';
     options.style.display = 'none';
     encodeMessage.style.display = 'none';
+    decodeMessage.style.display = 'none';
     exit.style.display = 'none';
     cleanValues();
 };
 document.getElementById('decode').addEventListener('click', showOffset2);
 document.getElementById('decoMessage').addEventListener('click', showOffset2);
 document.getElementById('returnDec').addEventListener('click', showOffset2);
+document.getElementById('tryAgainOffs').addEventListener('click', showOffset2);
 
 //Función muestra pantalla para codificar mensaje
 const showEncodeMess = () =>{
